@@ -1,0 +1,93 @@
+.pricing::before {
+    content: "$";
+    font-size: 22px;
+    line-height: 1.45;
+    position: absolute;
+    top: -18px;
+    left: 13px;
+    padding-left: 112px;
+}
+
+.pricings::before {
+    content: "$";
+    font-size: 22px;
+    line-height: 1.45;
+    position: absolute;
+    top: -18px;
+    left: 13px;
+    padding-left: 95px;
+}
+
+.pricingwrapper {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #f9f9fb;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.43;
+    color: #5b6b82;
+
+}
+
+.pricingwrapper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #3ccf8e;
+    background-image: url(https://s3.amazonaws.com/notify-resources/checkMark.svg);
+}
+
+
+.button {
+    letter-spacing: 1px;
+    border-radius: 6px;
+    outline: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 14px;
+    height: 48px;
+    width: 100%;
+    border: 1px solid #e2642c;
+    background-color: #fff;
+    color: #e2642c;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.pricingbutton {
+    margin: 18px auto;
+    width: 210px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.containers {
+    padding: 10.8rem 44px 0;
+    margin-top: 4rem;
+    background-image: url(https://s3.amazonaws.com/notify-resources/pricingBackgorund.svg)
+}
+
+.container::before{
+    content: "";
+    background-image: url(https://s3.amazonaws.com/notify-resources/leftPricingDots.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 68rem;
+    left: 50px;
+    height: 100%;
+    width: 73%;
+    order: base;
+    z-index: -1;
+}
