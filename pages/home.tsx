@@ -5,6 +5,8 @@ import People from '../components/home/people';
 import Feedback from '../components/home/feedback';
 import Pricing from '../components/home/pricing';
 import Help from '../components/home/help';
+import MoreExpress from '../components/home/howYouTakeNotes';
+import Footer from '../components/common/footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -17,7 +19,8 @@ function Home() {
             <Feedback/>
             <Help/>
             <Pricing/>
-            
+            <MoreExpress/>
+            <Footer/>
         </div>
      );
 }

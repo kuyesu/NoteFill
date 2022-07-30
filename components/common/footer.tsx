@@ -1,65 +1,42 @@
-import styles from '../../styles/Home.module.css'
-import Image from 'next/image'
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import React from 'react';
+import clsx from 'clsx';
+import styles from './css/footer.module.css';
 
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
-
-// create a tsx footer function
-export const Footer = () => {
+export default function Footer() {
     return (
-        <footer className={styles.footer}>
-
-            
-            
-            <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-        <p>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                    </span>
-                </a>
-            </p>
-        </Grid>
-        <Grid item xs={12}>
-        <p>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Copyright © Notify. All Rights Reserved.
-                </a>
-            </p>
-        </Grid>
-       
-        <Grid item xs={4} textAlign='start'>
-          <a>With Love, from Canada</a>
-        </Grid>
-        <Grid item xs={4} textAlign='center'>
-          Privacy Policy
-        </Grid>
-        <Grid item xs={4} textAlign='end'>
-        © Notify
-        </Grid>
-      </Grid>
-    </Box>
-        </footer>
-    )
+        <div>
+            <div className={clsx("container pt-3",)}>
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="d-grid gap-2 d-md-flex justify-content-md-center" style={{ marginBottom: 45, display: "flex", marginLeft: 450, marginRight: 450, marginTop: 20, }}>
+                            <div className="pricing-header px-3 py-1 pt-md-5  mx-auto text-center" style={{ textAlign: "center", justifyContent: "center", marginTop: 80, }}>
+                                <footer>
+                                    <a href="#">
+                                    <h1 className={clsx("display-4", styles.text)} style={{fontSize: 38, fontWeight: 800,textAlign: "center",color: "#4d274e", fontFamily: 'Pacifico,  cursive',}}>NoteFill</h1>
+                                    </a>
+                                    <div className="footer-copyright" style={{
+                                        fontSize: 13,
+                                        lineHeight: 1.66,
+                                        textAlign: "center",
+                                        color: "#5b6b82", 
+                                        fontFamily: "Open Sans, sans-serif",
+                                        fontWeight: 500,
+                                        letterSpacing: 0
+                                    }}>
+                                        <p>Copyright © NoteFill. All Rights Reserved.</p>
+                                        <p>Keep it with NoteFill. Collaborate and work together to stay on top of the newest trends in Note taking</p>
+                                        <p>
+                                            <a href="/privacy" className="underline" target="_blank">Privacy Policy</a>
+                                        </p>
+                                    </div>
+                                </footer>
+                                <div className="title-dash text-center" style={{ height: 6, borderRadius: 5, backgroundColor: "#542350", display: "flex", marginLeft: 500, marginRight: 500, marginTop: 20, }} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }

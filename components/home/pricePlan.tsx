@@ -137,7 +137,10 @@ export function StarterPlan() {
             <CardContent className="border-box" sx={{ borderRadius: 2, justifyContent: "center", alignItems: "center", margin: 3 }}>
                 <div>
                     <div className={clsx("pricing-button pt-10", styles.pricinbutton)}>
-                    <button type="button" className={clsx("btn ", styles.button)}>Start Now</button>
+                    <button type="button" className={clsx("btn ", styles.button)} style={{
+                        backgroundColor: "#e2642c",
+                        color: "#fff",
+                    }}>Start Now</button>
                     </div>
                 </div>
             </CardContent>
