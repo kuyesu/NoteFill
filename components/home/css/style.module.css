@@ -4,5 +4,15 @@
 }
 
 .search_input{
-    width: 50%;
+    width: 100%;
+}
+
+.pricinbutton{
+    display: flex;
+}
+
+.button{
+    flex: 1;
+    
+    
 }

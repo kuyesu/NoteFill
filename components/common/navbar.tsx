@@ -5,9 +5,9 @@ import clsx from 'clsx'
 function NavBar() {
     return (
         <Fragment>
-            <nav className="navbar navbar-expand-lg navbar-light bg-white">
+            <nav className="navbar navbar-expand-lg navbar-light bg-white mb-5">
                 <div className="container-fluid">
-                    <a className="navbar-brand text-danger" href="#">
+                    <a className={clsx("navbar-brand text-danger", styles.text)} href="#">
                         NoteFill
                     </a>
                     <button
@@ -24,19 +24,23 @@ function NavBar() {
                     <div className="collapse navbar-collapse justify-content-end m-5" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="#" style={{fontSize: 16, marginRight: 10}}>
                                     Features
                                 </a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" style={{fontSize: 16, marginRight: 10}}>
                                 <a className="nav-link" href="#">
                                     Pricing
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className={clsx(styles.logbtn, "nav-link btn btn-danger text-white")} href="#">
-                                    Log in
-                                </a>
+
+                                <div className={clsx("pricing-button pt-10", styles.pricinbutton)}>
+                                    <button type="button" className={clsx("btn ", styles.button)} style={{
+                                        backgroundColor: "#e2642c",
+                                        color: "#fff",
+                                    }}>Sign In</button>
+                                </div>
                             </li>
                         </ul>
                     </div>

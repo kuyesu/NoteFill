@@ -2,3 +2,10 @@
     background: orange;
     color: orange;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.text {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    font-weight: bold;
+}
