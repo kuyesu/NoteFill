@@ -7,7 +7,7 @@ function People() {
         <Fragment>
             <div className="m-5">
                 <div className="container m-auto">
-                    <img style={{width: "100%", height:"200px"}} className={clsx(classes.people)} src="https://s3.amazonaws.com/notify-resources/connect/responsivePeople.svg" alt="" srcset="" />
+                    <img style={{width: "100%", height:"200px"}} className={clsx(classes.people)} src="https://s3.amazonaws.com/notify-resources/connect/responsivePeople.svg" alt="" />
                 </div>
                 <div className="text-center">
                     <h2 className='text-danger' style={{fontWeight: 600, fontSize: 24}}>&#10084;&#65039; These awesome people, along with others, love NoteFill </h2>
