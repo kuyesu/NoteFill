@@ -8,7 +8,7 @@ function NavBar() {
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
                 <div className="container-fluid">
                     <a className="navbar-brand text-danger" href="#">
-                        NotFill
+                        NoteFill
                     </a>
                     <button
                         className="navbar-toggler"

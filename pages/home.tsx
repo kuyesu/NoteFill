@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../components/common/navbar';
 import Hero from '../components/home/hero';
 import People from '../components/home/people';
+import Feedback from '../components/home/feedback';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -11,7 +12,7 @@ function Home() {
             <NavBar/>
             <Hero/>
             <People/>
-            
+            <Feedback/>
         </div>
      );
 }
