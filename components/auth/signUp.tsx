@@ -98,14 +98,14 @@ export default function SignUp() {
                         <Button startIcon={<Google />}
                             //   variant="secondary" 
                             type="submit"
-                            className={clsx("", styles.button)} sx={{marginRight: 2}}>
+                            className={clsx("", styles.button)} sx={{marginRight: 2, color: "e2642c"}}>
                             Google
                         </Button>
 
                         <Button startIcon={<Apple />}
                             //   variant="secondary" 
                             type="submit"
-                            className={clsx("", styles.button)}>
+                            className={clsx("", styles.button)} sx={{color: "e2642c"}}>
                             Apple
                         </Button>
                     </Stack >
