@@ -6,12 +6,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Avatar } from '@mui/material';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 import clsx from 'clsx'
 import styles from './css/card.module.css'
 
 export function User1() {
     return (
-        <Card sx={{ maxWidth: 345,  }} className={clsx("", styles.card)}>
+        <Card sx={{ maxWidth: 345, }} className={clsx("", styles.card)}>
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
@@ -23,8 +25,9 @@ export function User1() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
@@ -44,8 +47,9 @@ export function User2() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
@@ -65,8 +69,9 @@ export function User3() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
@@ -87,8 +92,9 @@ export function User4() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
@@ -108,8 +114,9 @@ export function User5() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={3.0} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
@@ -124,14 +131,15 @@ export function User6() {
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
                     @twitter_username
                 </Typography>
-                <Typography variant="body2"  className={clsx("", styles.content)}>
+                <Typography variant="body2" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
                     species, ranging across all continents except Antarctica
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
@@ -151,8 +159,9 @@ export function User7() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Stack spacing={1}>
+                    <Rating name="half-rating-read" defaultValue={3.5} precision={0.5} readOnly />
+                </Stack>
             </CardActions>
         </Card>
     );
