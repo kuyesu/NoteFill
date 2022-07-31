@@ -1,8 +1,14 @@
 import React, { Fragment } from 'react'
 import clsx from 'clsx';
+import Modal from '@mui/material/Modal';
 import styles from './css/style.module.css'
+import SignUp from '../auth/signUp'
 
 function Hero() {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     return (
         <Fragment>
             <div className="text-center container pt-2">
@@ -19,10 +25,12 @@ function Hero() {
                 <div className="container text-center" style={{justifyContent: "center", alignItems: "center", }}>
                     <div className="search_input container pt-5" style={{justifyContent: "center", alignItems: "center", display: "flex", marginLeft: 100}}>
                         <input className={clsx(styles.search_input, "form-control form-control-lg center ")} type="text" placeholder="Name@Example.com" aria-label="default input example" 
-                        style={{width: "80%", height: "50px", borderRadius: "25px", border: "1px solid #e2642c", backgroundColor: "#fff", padding: "20px", fontSize: "18px",  display: "flex", justifyContent: "center", marginLeft: "auto", marginRight: "auto", }}
+                        style={{width: "80%", height: "50px", borderRadius: "25px", border: "1px solid #e2642c", backgroundColor: "#fff", padding: "20px", paddingLeft: "30px", fontSize: "18px",  display: "flex", justifyContent: "center", marginLeft: "auto", marginRight: "auto", }}
                         />
                         
-                                    <button type="button" className={clsx("btn ", styles.button)} style={{
+                                    <button type="button" className={clsx("btn ", styles.button)} 
+                                    onClick={handleOpen}
+                                    style={{
                                         backgroundColor: "#e2642c",
                                         color: "#fff",
                                         marginLeft: -150,
@@ -30,6 +38,18 @@ function Hero() {
                                         borderRadius: "25px",
                                         height: "40px"
                                     }}>Sign Up</button>
+                                    <Modal
+                                        keepMounted
+                                        open={open}
+                                        onClose={handleClose}
+                                        aria-labelledby="keep-mounted-modal-title"
+                                        aria-describedby="keep-mounted-modal-description"
+                                    >
+
+                                        <SignUp />
+
+
+                                    </Modal>
                                
                     </div>
                 </div>

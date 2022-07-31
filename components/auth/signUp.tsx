@@ -39,7 +39,7 @@ const style = {
     boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 };
 
-export default function Login() {
+export default function SignUp() {
 
 
 
@@ -86,7 +86,7 @@ export default function Login() {
             <Typography 
                         //   variant="p" color="primary" 
                         sx={{color: "#e2642c", paddingTop: 2, paddingLeft: 4, paddingBottom: 5,fontWeight: 100, fontSize: 18,  }}>
-                        LOGIN TO YOU ACCOUNT
+                        Create your Account
                     </Typography >
             </div>
             <Form style={{ alignItems: "center" }}>

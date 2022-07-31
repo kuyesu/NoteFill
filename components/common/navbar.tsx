@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react'
-import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import Typography from '@mui/material/Typography';
 import styles from './css/navbar.module.css'
 import clsx from 'clsx'
 import Login from '../auth/signIn'
@@ -64,6 +62,10 @@ function NavBar() {
                                         className={clsx("btn ", styles.button)} style={{
                                             backgroundColor: "#e2642c",
                                             color: "#fff",
+                                            borderRadius: "25px",
+                                            height: "40px",
+                                            paddingLeft: "30px",
+                                            paddingRight: "30px"
                                         }}>Sign In</button>
                                     <Modal
                                         keepMounted
@@ -72,9 +74,9 @@ function NavBar() {
                                         aria-labelledby="keep-mounted-modal-title"
                                         aria-describedby="keep-mounted-modal-description"
                                     >
-                                        
-                                            <Login />
-                                       
+
+                                        <Login />
+
 
                                     </Modal>
                                 </div>
