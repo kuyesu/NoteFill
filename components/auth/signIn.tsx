@@ -35,6 +35,7 @@ const style = {
     bgcolor: 'background.paper',
     p: 4,
     borderRadius: "8px",
+    height: 480,
     boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 };
 
@@ -81,14 +82,21 @@ export default function Login() {
             noValidate
             autoComplete="off"
         >
+            <div className="text justify-content-center">
+            <Typography 
+                        //   variant="p" color="primary" 
+                        sx={{color: "#e2642c", paddingTop: 2, paddingLeft: 4, paddingBottom: 5,fontWeight: 100, fontSize: 18,  }}>
+                        LOGIN TO YOU ACCOUNT
+                    </Typography >
+            </div>
             <Form style={{ alignItems: "center" }}>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <TextField label="Email" color="secondary" sx={{ m: 0, width: '35ch' }} />
+                    <TextField label="Email" color="warning" sx={{ m: 0, width: '35ch' }} />
                 </Form.Group>
 
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <FormControl sx={{ m: 0, width: '35ch' }} variant="outlined" color="secondary" >
+                    <FormControl sx={{ m: 0, width: '35ch', borderColor: "#e2642c" }} color="warning" variant="outlined"  >
                         <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                         <OutlinedInput
                             id="outlined-adornment-password"
@@ -117,7 +125,7 @@ export default function Login() {
 
                     <FormControlLabel
                         control={
-                            <Switch checked={checked} onChange={handleChecked} name="check" style={{color: "#e2642c"}} />
+                            <Switch checked={checked} onChange={handleChecked} name="check" style={{color: "#e2642c",}} />
                             // style={{color: "#e2642c"}}
                         }
                         label="Keep me signed in"
@@ -126,6 +134,7 @@ export default function Login() {
                     />
                 </Form.Group>
                 <Stack
+                sx={{marginTop: 8}}
                     direction="row">
                     <Typography gutterBottom
                         //   variant="p" color="primary" 
@@ -138,6 +147,7 @@ export default function Login() {
                         sx={{ backgroundColor: "#e2642c", color: "#fff", justifyContent: "right", marginLeft: 16 }}>
                         Submit
                     </Button>
+                    
                 </Stack>
             </Form>
         </Box>
