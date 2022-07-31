@@ -10,6 +10,10 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import clsx from 'clsx'
 import styles from './css/card.module.css'
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 
 export function User1() {
     return (
@@ -17,7 +21,7 @@ export function User1() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @Lrandom_user
+                    <TwitterIcon />@random_user
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -39,7 +43,7 @@ export function User2() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @smart_user
+                <span><InstagramIcon /></span>@smart_user
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -61,7 +65,7 @@ export function User3() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @organisation
+                <span><FacebookIcon /></span>@organisation
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -84,7 +88,7 @@ export function User4() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @school_student
+                <span><TwitterIcon /></span>@school_student
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -106,7 +110,7 @@ export function User5() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @histogram_user
+                <span><InstagramIcon /></span>@histogram_user
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -129,7 +133,7 @@ export function User6() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @twitter_username
+                <span><TwitterIcon /></span>@twitter_username
                 </Typography>
                 <Typography variant="body2" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -151,7 +155,7 @@ export function User7() {
             <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" className={clsx("", styles.header)}>
-                    @lizard_data
+                <span><InstagramIcon sx={{color: "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)"}} /></span>@lizard_data
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
