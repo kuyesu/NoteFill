@@ -1,14 +1,16 @@
 import * as React from 'react';
+import Link from 'next/link'
 import {
     Card,
     Stack,
-   
+
     Typography
 
 } from '@mui/material';
 import clsx from 'clsx'
 import styles from './css/auth.module.css'
 import SignUpModal from './signupModal';
+
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -59,35 +61,37 @@ export default function SignUp() {
     return (
         <div className='container-fluid' style={style}>
             <div className="row">
-                <div className="col-md-4" style={{ backgroundColor: "#4d274e", marginBottom: -100, display: "inline-block",}}>
-                <Typography
+                <div className="col-md-4" style={{ backgroundColor: "#4d274e", marginBottom: -100, display: "inline-block", }}>
+                    <Typography
                         //   variant="p" color="primary" 
-                        sx={{ color: "#fff", paddingTop: 11,fontWeight: 100, fontSize: 18, textAlign: "center", marginLeft: 8, marginRight: 8  }}>
-                        Collaborate and work together to stay on top of the newest trends in Note taking 
+                        sx={{ color: "#fff", paddingTop: 11, fontWeight: 100, fontSize: 18, textAlign: "center", marginLeft: 8, marginRight: 8 }}>
+                        Collaborate and work together to stay on top of the newest trends in Note taking
                     </Typography >
                     <Typography
                         //   variant="p" color="primary" 
-                        sx={{ color: "#fff", paddingTop: 3,fontWeight: 900, fontSize: 28, textAlign: "center", marginLeft: 1, marginRight: 1 }}>
-                    Newest Trend In Note Taking
+                        sx={{ color: "#fff", paddingTop: 3, fontWeight: 900, fontSize: 28, textAlign: "center", marginLeft: 1, marginRight: 1 }}>
+                        Newest Trend In Note Taking
                     </Typography >
 
                     <Stack
-                    direction="row"
-                    
+                        direction="row"
+
                     >
-                       <div style={{marginTop: 54, marginLeft: 50}}>
-                        <img src="https://s3.amazonaws.com/notify-resources/connect/success-login.svg" alt="image" style={{marginTop: 4, width: "80%", height: "100%"}} />
-                       </div>
+                        <div style={{ marginTop: 54, marginLeft: 50 }}>
+                            <img src="https://s3.amazonaws.com/notify-resources/connect/success-login.svg" alt="image" style={{ marginTop: 4, width: "80%", height: "100%" }} />
+                        </div>
                     </Stack >
                 </div>
-                <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem"}}>
+                <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem" }}>
                     <div className="text">
-                        <a href="/" className={clsx("", styles.back)}>Back To Home</a>
+                        <Link href="/">
+                            <a className={clsx("", styles.back)}>Back To Home</a>
+                        </Link>
                     </div>
-                    <div className='card' style={{marginLeft: "16rem"}}>
-                    <SignUpModal  />
+                    <div className='card' style={{ marginLeft: "16rem" }}>
+                        <SignUpModal />
                     </div>
-                    
+
                 </div>
             </div>
         </div>
