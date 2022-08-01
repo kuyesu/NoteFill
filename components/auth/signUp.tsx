@@ -58,6 +58,8 @@ export default function SignUp() {
     };
     const [checked, setChecked] = React.useState(false);
 
+    
+
     return (
         <div className='container-fluid' style={style}>
             <div className="row">
@@ -84,8 +86,8 @@ export default function SignUp() {
                 </div>
                 <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem" }}>
                     <div className="text">
-                        <Link href="/">
-                            <a className={clsx("", styles.back)}>Back To Home</a>
+                        <Link href="/home" replace >
+                            <a className={clsx("", styles.back)} >Back To Home</a>
                         </Link>
                     </div>
                     <div className='card' style={{ marginLeft: "16rem" }}>
