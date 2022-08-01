@@ -62,7 +62,7 @@ export default function SignUp() {
                 <div className="col-md-4" style={{ backgroundColor: "#4d274e", marginBottom: -100, display: "inline-block",}}>
                 <Typography
                         //   variant="p" color="primary" 
-                        sx={{ color: "#fff", paddingTop: 10,fontWeight: 100, fontSize: 18, textAlign: "center", marginLeft: 8, marginRight: 8  }}>
+                        sx={{ color: "#fff", paddingTop: 11,fontWeight: 100, fontSize: 18, textAlign: "center", marginLeft: 8, marginRight: 8  }}>
                         Collaborate and work together to stay on top of the newest trends in Note taking 
                     </Typography >
                     <Typography
