@@ -86,7 +86,7 @@ export default function SignUp() {
                 </div>
                 <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem" }}>
                     <div className="text">
-                        <Link href="/home" replace >
+                        <Link href="/home" replace as="/">
                             <a className={clsx("", styles.back)} >Back To Home</a>
                         </Link>
                     </div>
