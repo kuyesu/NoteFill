@@ -93,7 +93,7 @@ export default function SignUp() {
                 </div>
                 <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem" }}>
                     <div className="text">
-                        <Link href="/"  >
+                        <Link href="/home"  >
                             <a className={clsx("", styles.back)} onClick={handleClickedButton} >Back To Home</a>
                         </Link>
                     </div>
