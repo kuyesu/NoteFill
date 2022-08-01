@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {
     Card,
     Stack,
@@ -59,7 +60,13 @@ export default function SignUp() {
     const [checked, setChecked] = React.useState(false);
 
     
-
+    const router = useRouter()
+    const routeData = () => router.push('/home')
+    const routeData1 = () => router.push('/')
+    const handleClickedButton = () => {
+        routeData()
+        routeData1()
+    }
     return (
         <div className='container-fluid' style={style}>
             <div className="row">
@@ -86,8 +93,8 @@ export default function SignUp() {
                 </div>
                 <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem" }}>
                     <div className="text">
-                        <Link href="/home" replace as="/">
-                            <a className={clsx("", styles.back)} >Back To Home</a>
+                        <Link href="/"  >
+                            <a className={clsx("", styles.back)} onClick={handleClickedButton} >Back To Home</a>
                         </Link>
                     </div>
                     <div className='card' style={{ marginLeft: "16rem" }}>
