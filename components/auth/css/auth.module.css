@@ -16,3 +16,25 @@
     font-weight: normal;
     cursor: pointer;
 }
+
+.back {
+    color: #e2642c;
+    position: absolute;
+    top: 75px;
+    left: 30rem;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back::before {
+    content: '';
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    background-image: url("https://s3.amazonaws.com/notify-resources/connect/back-arrow-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    margin-inline-end: 15px;
+}

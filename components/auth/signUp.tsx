@@ -1,44 +1,25 @@
 import * as React from 'react';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Form from 'react-bootstrap/Form';
-import SendIcon from '@mui/icons-material/AccountCircle';
 import {
     Card,
     Stack,
-    Switch,
-    TextField,
-    FormControl,
-    InputAdornment,
-    InputLabel,
-    OutlinedInput,
-    FormHelperText,
-    IconButton,
-    Button,
-    FormControlLabel,
-    FormGroup,
-    FormLabel,
-    Box,
-    FilledInput,
-    Input,
+   
     Typography
 
 } from '@mui/material';
 import clsx from 'clsx'
 import styles from './css/auth.module.css'
-import Google from '../icons/google.svg'
-import Apple from '../icons/apple.svg'
+import SignUpModal from './signupModal';
 
 const style = {
     position: 'absolute' as 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
+    width: "100%",
+    backgroundColor: "#fff",
     p: 4,
-    borderRadius: "8px",
-    height: 480,
+    borderRadius: "0px",
+    height: "100%",
     boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 };
 
@@ -76,101 +57,39 @@ export default function SignUp() {
     const [checked, setChecked] = React.useState(false);
 
     return (
-        <Card sx={style}>
-            <Box
-                component="form"
-                sx={{
-                    '& > :not(style)': { m: 2, },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                
+        <div className='container-fluid' style={style}>
+            <div className="row">
+                <div className="col-md-4" style={{ backgroundColor: "#4d274e", marginBottom: -100, display: "inline-block",}}>
+                <Typography
+                        //   variant="p" color="primary" 
+                        sx={{ color: "#fff", paddingTop: 10,fontWeight: 100, fontSize: 18, textAlign: "center", marginLeft: 8, marginRight: 8  }}>
+                        Collaborate and work together to stay on top of the newest trends in Note taking 
+                    </Typography >
                     <Typography
                         //   variant="p" color="primary" 
-                        sx={{ color: "#e2642c", paddingTop: 2,fontWeight: 100, fontSize: 18, }}>
-                        Continue with 
+                        sx={{ color: "#fff", paddingTop: 3,fontWeight: 900, fontSize: 28, textAlign: "center", marginLeft: 1, marginRight: 1 }}>
+                    Newest Trend In Note Taking
                     </Typography >
+
                     <Stack
                     direction="row"
                     
                     >
-                        <Button startIcon={<Google />}
-                            //   variant="secondary" 
-                            type="submit"
-                            className={clsx("", styles.button)} sx={{marginRight: 2, color: "e2642c"}}>
-                            Google
-                        </Button>
-
-                        <Button startIcon={<Apple />}
-                            //   variant="secondary" 
-                            type="submit"
-                            className={clsx("", styles.button)} sx={{color: "e2642c"}}>
-                            Apple
-                        </Button>
+                       <div style={{marginTop: 54, marginLeft: 50}}>
+                        <img src="https://s3.amazonaws.com/notify-resources/connect/success-login.svg" alt="image" style={{marginTop: 4, width: "80%", height: "100%"}} />
+                       </div>
                     </Stack >
-                    <Form style={{ alignItems: "center" }}>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <TextField label="Email" color="warning" sx={{ m: 0, width: '35ch' }} />
-                        </Form.Group>
-
-
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <FormControl sx={{ m: 0, width: '35ch', borderColor: "#e2642c" }} color="warning" variant="outlined"  >
-                                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                                <OutlinedInput
-                                    id="outlined-adornment-password"
-                                    type={values.showPassword ? 'text' : 'password'}
-                                    value={values.password}
-                                    onChange={handleChange('password')}
-                                    endAdornment={
-                                        <InputAdornment position="end">
-                                            <IconButton
-                                                aria-label="toggle password visibility"
-                                                onClick={handleClickShowPassword}
-                                                onMouseDown={handleMouseDownPassword}
-                                                edge="end"
-                                            >
-                                                {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                                            </IconButton>
-                                        </InputAdornment>
-                                    }
-                                    label="Password"
-                                />
-                            </FormControl>
-                        </Form.Group>
-
-
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-
-                            <FormControlLabel
-                                control={
-                                    <Switch checked={checked} onChange={handleChecked} name="check" style={{ color: "#e2642c", }} />
-                                    // style={{color: "#e2642c"}}
-                                }
-                                label="Keep me signed in"
-
-                            // inputProps={{ 'aria-label': 'controlled' }}
-                            />
-                        </Form.Group>
-                        <Stack
-                            sx={{ marginTop: 8 }}
-                            direction="row">
-                            <Typography gutterBottom
-                                //   variant="p" color="primary" 
-                                component="div" sx={{ paddingTop: 1, fontWeight: 500, fontSize: 14, }}>
-                                <a href='/signup' style={{ color: "#e2642c" }}>Create account</a>
-                            </Typography >
-                            <Button endIcon={<SendIcon />}
-                                //   variant="secondary" 
-                                type="submit"
-                                sx={{ backgroundColor: "#e2642c", color: "#fff", justifyContent: "right", marginLeft: 11 }}>
-                                Submit
-                            </Button>
-
-                        </Stack>
-                    </Form>
-            </Box>
-        </Card>
+                </div>
+                <div className="col-md-8 " style={{ backgroundColor: "#fff", width: "50%", paddingTop: "5rem", marginLeft: "4rem"}}>
+                    <div className="text">
+                        <a href="/" className={clsx("", styles.back)}>Back To Home</a>
+                    </div>
+                    <div className='card' style={{marginLeft: "16rem"}}>
+                    <SignUpModal  />
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     );
 }
