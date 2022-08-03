@@ -24,8 +24,9 @@ export function User1() {
                     <TwitterIcon />@random_user
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                   NoteFill is such an incredible web application ,
+                    It makes my work look organised which is easier to work with.
+
                 </Typography>
             </CardContent>
             <CardActions>
