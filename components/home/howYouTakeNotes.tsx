@@ -20,7 +20,7 @@ export default function MoreExpress() {
                             <div className={clsx("pricing-button pt-10", styles.pricinbutton)}>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-center" style={{marginBottom: 45, display: "flex", marginLeft: 450, marginRight: 450, marginTop: 20, }}>
 
-                                    <button type="button" className={clsx("btn sm", styles.button)}>Sign Up Now</button>
+                                    <button type="button" className={clsx("w-100 btn sm", styles.button)}>Sign Up Now</button>
                                 </div>
                             </div>
                         </div>

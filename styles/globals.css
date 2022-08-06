@@ -10,6 +10,9 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   letter-spacing: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 a {
@@ -21,40 +24,67 @@ a {
   box-sizing: border-box;
 }
 
+/* back button in auth pages */
+.back {
+    color: #e2642c;
+    position: absolute;
+    top: 75px;
+    left: 30rem;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back:hover {
+    color: #d19a83;
+    font-size: 14px;
+}
 
-/* icons */
-.insta-icon.small {
-  --insta-icon-size: 16px;
+.back::before {
+    content: '';
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    background-image: url("https://s3.amazonaws.com/notify-resources/connect/back-arrow-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    margin-inline-end: 15px;
 }
-.insta-icon {
-  --insta-icon-size: 128px;
+
+.button-light {
+    letter-spacing: 1px;
+    border-radius: 6px;
+    outline: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 14px;
+    height: 48px;
+    width: 100%;
+    border: 1px solid #e2642c;
+    background-color: #fff;
+    color: #e2642c;
+    font-weight: normal;
+    cursor: pointer;
 }
-.insta-icon.large {
-  --insta-icon-size: 256px;
+.button-light:hover {
+    border: 1px solid #e2642c;
+    color: #fff;
 }
-.insta-icon {
-  position: relative;
-  width: var(--insta-icon-size);
-  height: var(--insta-icon-size);
-  border-radius: 20%;
-  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf)
+.input-aut{
+    width: 100%;
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid #e2642c;
+    font-size: 16px;
+    color: #e2642c;
+    font-weight: normal;
 }
-.insta-icon:after,
-.insta-icon:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(var(--insta-icon-size)/1.5);
-  height: calc(var(--insta-icon-size)/1.5);
-  border: calc(var(--insta-icon-size)/18) solid #fff;
-  transform: translate(-50%, -50%);
-  content: ''
-}
-.insta-icon:before {
-  border-radius: 20%
-}
-.insta-icon:after {
-  width: calc(var(--insta-icon-size)/4);
-  height: calc(var(--insta-icon-size)/4);
-  border-radius: 50%
+.input-aut:focus {
+    outline: none;
+    border: 1px solid #e2642c;
+    color: #1d0d06;
+    box-shadow: none;
 }
