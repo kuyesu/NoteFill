@@ -47,8 +47,8 @@ export function User2() {
                 <span><InstagramIcon /></span>@smart_user
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    It is such a responsive web , it has really helped me with my note taking be it personal or academically. 
+                    NoteFill is  the best
                 </Typography>
             </CardContent>
             <CardActions>
@@ -69,8 +69,7 @@ export function User3() {
                 <span><FacebookIcon /></span>@organisation
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    NoteFill has made note taking look easier and convienient, this is one of the best web applications for me.
                 </Typography>
             </CardContent>
             <CardActions>
@@ -92,8 +91,7 @@ export function User4() {
                 <span><TwitterIcon /></span>@school_student
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    This not only helps with my notetaking , it also helps me jot important points even on meetings.
                 </Typography>
             </CardContent>
             <CardActions>
@@ -114,8 +112,7 @@ export function User5() {
                 <span><InstagramIcon /></span>@histogram_user
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                   NoteFill is very user friendly and I recommend it to anyone that is willing to take notes or write anything down.
                 </Typography>
             </CardContent>
             <CardActions>
@@ -137,8 +134,7 @@ export function User6() {
                 <span><TwitterIcon /></span>@twitter_username
                 </Typography>
                 <Typography variant="body2" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    One of the usefull website that I always check with regards to my notetaking and I am never disappointed.
                 </Typography>
             </CardContent>
             <CardActions>
@@ -159,8 +155,7 @@ export function User7() {
                 <span><InstagramIcon sx={{color: "radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)"}} /></span>@lizard_data
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className={clsx("", styles.content)}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    
                 </Typography>
             </CardContent>
             <CardActions>
