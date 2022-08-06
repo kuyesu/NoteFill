@@ -73,7 +73,7 @@ function Hero() {
                   marginRight: "auto",
                 }}
               />
-              <Link href="/">
+              <Link href="/signup">
                 <button
                   type="button"
                   className={clsx("btn ", styles.button)}
@@ -90,16 +90,6 @@ function Hero() {
                   Sign Up
                 </button>
               </Link>
-
-              <Modal
-                keepMounted
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="keep-mounted-modal-title"
-                aria-describedby="keep-mounted-modal-description"
-              >
-                <SignUp />
-              </Modal>
             </div>
           </div>
         </div>
