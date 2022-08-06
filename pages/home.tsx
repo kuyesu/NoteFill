@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Home() {
-    return ( 
-        <div>
+    return (
+        <div className='relative h-screen  '>
             <NavBar/>
             <Hero/>
             <People/>
