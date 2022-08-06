@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import clsx from 'clsx';
 import Modal from '@mui/material/Modal';
 import styles from './css/style.module.css'
-import SignUp from '../auth/signUp'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
