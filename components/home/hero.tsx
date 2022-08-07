@@ -21,7 +21,7 @@ function Hero() {
 
     return (
       <Fragment>
-        <div className="text-center container pt-2">
+        <div className="text-center container pt-2 overflow-hidden">
           <div className="container">
             <h5 className="text-dark" style={{ fontWeight: 700, fontSize: 22 }}>
               Collaborate and work together to stay on top of the newest trends
@@ -59,7 +59,7 @@ function Hero() {
                 aria-label="default input example"
                 style={{
                   width: "80%",
-                  height: "50px",
+                  height: "40px",
                   borderRadius: "25px",
                   border: "1px solid #e2642c",
                   backgroundColor: "#fff",
@@ -81,9 +81,9 @@ function Hero() {
                     backgroundColor: "#e2642c",
                     color: "#fff",
                     marginLeft: -170,
-                    marginRight: 244,
+                    marginRight: 192,
                     borderRadius: "25px",
-                    height: "40px",
+                    height: "38px",
                   }}
                 >
                   Sign Up
