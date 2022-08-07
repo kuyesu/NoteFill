@@ -6,6 +6,8 @@ import Link from "next/link";
 import { auth, db } from "../firebase/firebaseClient";
 import Google from "../public/assets/images/google.svg";
 
+import Plan from "../components/plan/plan";
+
 const provider = new GoogleAuthProvider();
 
 export default function Login() {
@@ -46,20 +48,8 @@ export default function Login() {
     auth.signOut();
     console.log("logout");
   };
-
-  const state = {
-    login: true,
-    signUpForm: {
-      name: "",
-      email: "",
-      password: "",
-    },
-    signInForm: {
-      email: "",
-      password: "",
-    },
-  };
-
+  const subscription = false
+  if (!subscription) return <Plan />;
   return (
     <section className="fixed h-screen bg-gradient-to-b from-gray-900/5 to-[#e2d8c3] lg:h-[140vh] w-100">
       {/* <!-- Jumbotron --> */}
