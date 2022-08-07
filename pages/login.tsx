@@ -48,7 +48,7 @@ export default function Login() {
     auth.signOut();
     console.log("logout");
   };
-  const subscription = false
+  const subscription = true
   if (!subscription) return <Plan />;
   return (
     <section className="fixed h-screen bg-gradient-to-b from-gray-900/5 to-[#e2d8c3] lg:h-[140vh] w-100">
@@ -123,7 +123,7 @@ export default function Login() {
                       <div className="d-flex justify-content-around align-items-justify mb-4 pt-3">
                         {/* <!-- Checkbox --> */}
                         <h2 className="fw-bold ">Sign in now</h2>
-                        <a href="#!">Don't have account?</a>
+                        <a href="#!">{`Don't have account?`}</a>
                       </div>
                       <form>
                         {/* <!-- Email input --> */}
