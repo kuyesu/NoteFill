@@ -1,7 +1,9 @@
 import { Button, Typography, Stack } from "@mui/material";
+import firebase from "firebase/app";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore";
 import Link from "next/link";
-import { auth } from "../firebase/firebaseClient";
+import { auth, db } from "../firebase/firebaseClient";
 import Google from "../public/assets/images/google.svg";
 
 const provider = new GoogleAuthProvider();
@@ -13,7 +15,21 @@ export default function Login() {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential?.accessToken;
         const user = result.user;
-        console.log({ credential, token, user });
+        const photoURL = user.photoURL;
+        const email = user.email;
+        const displayName = user.displayName;
+        const uid = user.uid;
+        const providerData = user.providerData;
+        // console.log({ credential, token, user });
+        // save user to firestore db
+        addDoc(collection(db, "users"), {
+          uid,
+          email,
+          displayName,
+          photoURL,
+          providerData,
+          token
+        })
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -21,7 +37,9 @@ export default function Login() {
         const email = error.email;
         const credential = GoogleAuthProvider.credentialFromError(error);
         console.log({ errorCode, errorMessage, email, credential });
-      });
+      })
+      // save user data to firestore
+
   }
 
   const logout = () => {
@@ -124,6 +142,7 @@ export default function Login() {
                             type="email"
                             id="form1Example13"
                             className="input-aut form-control form-control-md"
+                            placeholder="Enter Email"
                           />
                         </div>
 
@@ -133,6 +152,7 @@ export default function Login() {
                             type="password"
                             id="form1Example23"
                             className="input-aut form-control form-control-md"
+                            placeholder="Enter Password"
                           />
                         </div>
 
