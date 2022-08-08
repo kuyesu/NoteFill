@@ -16,6 +16,14 @@ const clientCredentials = {
 if(!getApps().length) {
     initializeApp(clientCredentials)
 }
-export const db = getFirestore();
-export const auth = getAuth()
-export default clientCredentials
+
+
+
+// Initialize Firebase
+const app = !getApps().length ? initializeApp(clientCredentials) : getApp()
+const db = getFirestore()
+const auth = getAuth()
+
+export { clientCredentials }
+export default app
+export { auth, db }

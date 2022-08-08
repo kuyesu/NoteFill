@@ -11,11 +11,13 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@heroicons/react": "^1.0.6",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.1",
+    "@stripe/firestore-stripe-payments": "^0.0.6",
     "@stripe/stripe-js": "^1.35.0",
     "@svgr/webpack": "^6.3.1",
     "@types/react-slick": "^0.23.10",
@@ -24,11 +26,13 @@
     "clsx": "^1.2.1",
     "firebase": "^9.9.2",
     "next": "12.2.2",
+    "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.14",
     "react": "18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.0.3",
+    "react-hook-form": "^7.34.0",
     "react-slick": "^0.29.0",
     "sass": "^1.54.3",
     "slick-carousel": "^1.8.1",
@@ -40,6 +44,7 @@
     "@types/react-dom": "18.0.6",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.2",
+    "prettier": "^2.7.1",
     "typescript": "4.7.4"
   }
 }

@@ -1,16 +1,46 @@
-import { Button, Typography, Stack } from "@mui/material";
-import firebase from "firebase/app";
+import React, { useState } from 'react';
+import {  Typography, Stack } from "@mui/material";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
 import Link from "next/link";
 import { auth, db } from "../firebase/firebaseClient";
 import Google from "../public/assets/images/google.svg";
 
-import Plan from "../components/plan/plan";
+import Plans from "../components/plan/plan";
+import { getProducts, Product } from "@stripe/firestore-stripe-payments";
+import useAuth from "../hooks/useAuth";
+import useSubscription from "../hooks/useSubscription";
+import payments from "../stripe/stripe";
 
+import { useForm, SubmitHandler } from "react-hook-form";
 const provider = new GoogleAuthProvider();
+interface Props {
+  products: Product[];
+}
+interface Inputs {
+  email: string;
+  password: string;
+}
+function Login({ products }: Props) {
+  const [login, setLogin] = useState(false);
+  const { signIn } = useAuth();
 
-export default function Login() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    console.log(data);
+    if (login) {
+      await signIn(data.email, data.password);
+    }
+  };
+
+  const { user, loading } = useAuth();
+  const subscription = useSubscription(user);
   async function signInWithGoogle() {
     signInWithPopup(auth, provider)
       .then((result) => {
@@ -30,8 +60,8 @@ export default function Login() {
           displayName,
           photoURL,
           providerData,
-          token
-        })
+          token,
+        });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -39,17 +69,16 @@ export default function Login() {
         const email = error.email;
         const credential = GoogleAuthProvider.credentialFromError(error);
         console.log({ errorCode, errorMessage, email, credential });
-      })
-      // save user data to firestore
+      });
+    // save user data to firestore
 
   }
 
-  const logout = () => {
-    auth.signOut();
-    console.log("logout");
-  };
-  const subscription = true
-  if (!subscription) return <Plan />;
+  // if user is logged in and has no subscription, redirect to plans page
+  // if (loading || subscription === null) return null;
+
+  if (!subscription) return <Plans products={products} />;
+
   return (
     <section className="fixed h-screen bg-gradient-to-b from-gray-900/5 to-[#e2d8c3] lg:h-[140vh] w-100">
       {/* <!-- Jumbotron --> */}
@@ -125,15 +154,24 @@ export default function Login() {
                         <h2 className="fw-bold ">Sign in now</h2>
                         <a href="#!">{`Don't have account?`}</a>
                       </div>
-                      <form>
+                      <form onSubmit={handleSubmit(onSubmit)}>
                         {/* <!-- Email input --> */}
                         <div className=" form-outline mb-4">
                           <input
                             type="email"
                             id="form1Example13"
-                            className="input-aut form-control form-control-md"
+                            className={`input ${
+                              errors.email &&
+                              "input-aut form-control form-control-md"
+                            }`}
                             placeholder="Enter Email"
+                            {...register("email", { required: true })}
                           />
+                          {errors.email && (
+                            <p className="p-1 text-[13px] font-light  text-orange-500">
+                              Please enter a valid email.
+                            </p>
+                          )}
                         </div>
 
                         {/* <!-- Password input --> */}
@@ -141,9 +179,19 @@ export default function Login() {
                           <input
                             type="password"
                             id="form1Example23"
-                            className="input-aut form-control form-control-md"
+                            className={`input ${
+                              errors.password &&
+                              "input-aut form-control form-control-md"
+                            }`}
                             placeholder="Enter Password"
+                            {...register("password", { required: true })}
                           />
+                          {errors.password && (
+                            <p className="p-1 text-[13px] font-light  text-orange-500">
+                              Your password must contain between 4 and 60
+                              characters.
+                            </p>
+                          )}
                         </div>
 
                         <div className="d-flex justify-content-around align-items-center mb-4">
@@ -171,6 +219,7 @@ export default function Login() {
                         <div className="text-center ">
                           <button
                             type="submit"
+                            onClick={() => setLogin(true)}
                             className="button-light btn btn-primary btn-md btn-block w-100"
                             style={{
                               fontSize: 12,
@@ -187,18 +236,17 @@ export default function Login() {
                             OR
                           </p>
                         </div>
-
-                        <Button
+                        <button
                           className="button-light btn btn-primary btn-lg btn-block w-100 mb-3"
                           style={{
                             fontSize: 14,
                           }}
                           role="button"
                           onClick={signInWithGoogle}
-                          startIcon={<Google />}
+                          // startIcon={<Google />}
                         >
                           Continue with Google
-                        </Button>
+                        </button>
                       </form>
                     </div>
                   </div>
@@ -212,3 +260,19 @@ export default function Login() {
     </section>
   );
 }
+
+export default Login;
+
+export const getServerSideProps = async () => {
+  const products = await getProducts(payments, {
+    includePrices: true,
+    activeOnly: true,
+  })
+    .then((res) => res)
+    .catch((error) => console.log(error.message));
+  return {
+    props: {
+      products,
+    },
+  };
+};

@@ -124,7 +124,7 @@ a {
   }
 
   .tableDataTitle {
-    @apply w-full p-2.5 text-center text-sm font-normal text-white md:w-2/5 md:p-3.5 md:text-left md:text-base;
+    @apply w-full p-2.5 text-center text-sm font-normal md:w-2/5 md:p-2 md:text-left md:text-base;
   }
 
   .tableDataFeature {

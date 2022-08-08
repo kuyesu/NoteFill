@@ -1,10 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const withTM = require('next-transpile-modules')([
+  '@stripe/firestore-stripe-payments',
+  '@stripe/stripe-js',
+]);
 
-module.exports = nextConfig
 
 module.exports = {
   webpack(config) {
@@ -16,3 +14,8 @@ module.exports = {
     return config;
   }
 };
+
+/** @type {import('next').NextConfig} */
+module.exports = withTM({
+  reactStrictMode: true,
+});
