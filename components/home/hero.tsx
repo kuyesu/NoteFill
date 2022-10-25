@@ -36,60 +36,53 @@ function Hero() {
               Newest Trend In Note Taking
             </h1>
           </div>
-          <div
-            className="container text-center"
-            style={{ justifyContent: "center", alignItems: "center" }}
-          >
-            <div
-              className="search_input container pt-5"
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
-                marginLeft: 100,
-              }}
-            >
-              <input
-                className={clsx(
-                  styles.search_input,
-                  "form-control form-control-lg center "
-                )}
-                type="text"
-                placeholder="Name@Example.com"
-                aria-label="default input example"
-                style={{
-                  width: "80%",
-                  height: "40px",
-                  borderRadius: "25px",
-                  border: "1px solid #e2642c",
-                  backgroundColor: "#fff",
-                  padding: "20px",
-                  paddingLeft: "30px",
-                  fontSize: "18px",
-                  display: "flex",
-                  justifyContent: "center",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                }}
-              />
-              <Link href="/signup">
+          <div className="container py-5" style={{maxWidth: "80%"}}>
+            <form>
+              <label
+                htmlFor="email"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
+              >
+                Your Email
+              </label>
+              <div className="relative">
+                <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"></div>
+                <input
+                  type="email"
+                  id="email"
+                  className={clsx(
+                    "block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-100 focus:border-blue-100 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
+                    styles.search_input
+                  )}
+                  placeholder="Enter your Email"
+                  required
+                  style={{
+                    height: "30px",
+                    borderRadius: "25px",
+                    border: "1px solid #e2642c",
+                    backgroundColor: "#fff",
+                    padding: "20px",
+                    paddingLeft: "30px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                />
                 <button
-                  type="button"
-                  className={clsx("btn ", styles.button)}
-                  onClick={handleClick}
+                  type="submit"
+                  className={clsx(
+                    "text-white absolute right-2.5 bottom-1.5 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
+                    styles.button
+                  )}
                   style={{
                     backgroundColor: "#e2642c",
                     color: "#fff",
-                    marginLeft: -170,
-                    marginRight: 192,
                     borderRadius: "25px",
                     height: "38px",
                   }}
                 >
                   Sign Up
                 </button>
-              </Link>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </Fragment>
