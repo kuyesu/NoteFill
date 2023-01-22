@@ -1,5 +1,5 @@
 {
-  "name": "younote",
+  "name": "notefill",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,37 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@material-ui/lab": "^4.0.0-alpha.61",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.9.1",
-    "@stripe/stripe-js": "^1.35.0",
-    "@svgr/webpack": "^6.3.1",
-    "@types/react-slick": "^0.23.10",
-    "autoprefixer": "^10.4.8",
-    "bootstrap": "^5.2.0",
-    "clsx": "^1.2.1",
-    "firebase": "^9.9.2",
-    "next": "12.2.2",
-    "postcss": "^8.4.14",
+    "@next/font": "13.1.4",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.4",
+    "next": "13.1.4",
     "react": "18.2.0",
-    "react-bootstrap": "^2.4.0",
     "react-dom": "18.2.0",
-    "react-firebase-hooks": "^5.0.3",
-    "react-slick": "^0.29.0",
-    "sass": "^1.54.3",
-    "slick-carousel": "^1.8.1",
-    "tailwindcss": "^3.1.8"
-  },
-  "devDependencies": {
-    "@types/node": "18.0.6",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.2",
-    "typescript": "4.7.4"
+    "typescript": "4.9.4"
   }
 }
