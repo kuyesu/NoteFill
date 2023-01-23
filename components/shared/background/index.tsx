@@ -7,7 +7,6 @@ export default function index() {
   return (
     <div className= {styles.main}>
          <div className= {styles.content}/>
-
     </div>
   )
 }
