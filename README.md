@@ -46,3 +46,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## This is two hashes
 <h2>This is h2</h2>
+
+
+``` python
+pip install pandas
+
+```
