@@ -18,6 +18,7 @@ import { ThemeToggle } from '@/components/theme-toggle'
 import { ClearHistory } from '@/components/clear-history'
 import { UserMenu } from '@/components/user-menu'
 import { LoginButton } from '@/components/login-button'
+import Image from 'next/image'
 
 export async function Header() {
   const session = await auth()
@@ -37,7 +38,7 @@ export async function Header() {
           </Sidebar>
         ) : (
           <Link href="/" target="_blank" rel="nofollow">
-            <span className="hidden ml-2 md:flex text-3xl">🐼</span>
+            <Image src="/logo.png" alt="NextChat" width={32} height={32} />
           </Link>
         )}
         <div className="flex items-center">
@@ -53,10 +54,10 @@ export async function Header() {
       </div>
       <div className="flex items-center justify-end space-x-2">
         <a className={cn(buttonVariants({ variant: 'outline' }))}>
-          <span className="hidden ml-2 md:flex">Smiling Pandas</span>
+          <span className="hidden ml-2 md:flex">NoteFill</span>
         </a>
         <a>
-          <span className="hidden ml-2 md:flex text-3xl">🐼</span>
+          <Image src="/logo.png" alt="NextChat" width={32} height={32} />
         </a>
       </div>
     </header>
