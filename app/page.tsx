@@ -1,12 +1,10 @@
-import React from 'react'
-import Background from '../components/shared/background'
-import Hero from '../components/home/hero'
+import { nanoid } from '@/lib/utils'
+import { Chat } from '@/components/chat'
 
-export default function page() {
-  return (
-    <div className="flex h-screen justify-center">
-    <Hero />
-    <Background />
-    </div>
-  )
+export const runtime = 'edge'
+
+export default function IndexPage() {
+  const id = nanoid()
+
+  return <Chat id={id} />
 }

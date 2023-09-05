@@ -1,17 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  reactStrictMode: true,
   experimental: {
-    appDir: true,
+    serverActions: true
   },
+  images: {
+    domains: [
+      'localhost',
+      'res.cloudinary.com',
+      'avatars.githubusercontent.com',
+      '*',
+      'localhost'
+    ]
+  }
 }
-
-// next.environment.mjs
-// export default {
-//   webpack(config){
-//     config.infrastructureLogging = {
-//       level: "error",
-//     }
-//   }
-// }
-
-module.exports = nextConfig
