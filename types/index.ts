@@ -5,3 +5,19 @@ export interface ChatGPTMessage {
   content: string;
   sources?: string[];
 }
+
+export type Id = string | number
+
+export type Column = {
+  id: Id
+  title: string
+  component: React.ReactNode
+  className: string
+}
+
+export type Task = {
+  id: Id
+  columnId: Id
+  content: string
+
+}

@@ -26,6 +26,7 @@ export async function POST(req: Request) {
   const response = await replicate.predictions.create({
     // You must enable streaming.
     stream: true,
+
     // The model must support streaming. See https://replicate.com/docs/streaming
     // This is the model ID for Llama 2 70b Chat
     version: '2796ee9483c3fd7aa2e171d38f4ca12251a30609463dcfd4cd76703f22e96cdf',
@@ -33,8 +34,9 @@ export async function POST(req: Request) {
     // @see https://github.com/vercel/ai/blob/99cf16edf0a09405d15d3867f997c96a8da869c6/packages/core/prompts/huggingface.ts#L53C1-L78C2
     input: {
       prompt: experimental_buildLlama2Prompt(messages),
+      
       system_prompt: `<s>[INST] <<SYS>>
-You are a helpful, respectful and honest university assistant called Jane. Always answer as
+You are a helpful, respectful and honest. Always answer as
 helpfully as possible, while being safe. Your answers should not include
 any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content.
 Please ensure that your responses are socially unbiased and positive in nature.
@@ -43,8 +45,7 @@ If a question does not make any sense, or is not factually coherent, explain
 why instead of answering something not correct. If you don't know the answer
 to a question, please don't share false information.
 
-Your goal is to provide answers relating to university or universities, admission and other campus life you can be creative to provide additional relevenat answer only where applicable.
-The document/documents have information of varoius universities and not specific to one university, your goal is to pick the most relevant information that the user want to know, do not make up any information.
+
 <</SYS>>
 `
     }
