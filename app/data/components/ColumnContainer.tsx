@@ -1,14 +1,13 @@
-import {  useSortable } from '@dnd-kit/sortable'
+import { useSortable } from '@dnd-kit/sortable'
 import { GrabIcon, TrashIcon } from '@/components/ui/icons'
 import { Column } from '@/types'
 import { CSS } from '@dnd-kit/utilities'
 import React, { useMemo, useState } from 'react'
-import {PlusIcon} from '@/components/ui/icons'
-
+import { PlusIcon } from '@/components/ui/icons'
 
 interface Props {
   column: Column
-  component: React.ReactNode,
+  component: React.ReactNode
   className: string
 }
 
@@ -21,8 +20,7 @@ export const ColumnContainer = ({ column, component, className }: Props) => {
     listeners,
     transform,
     transition,
-    isDragging,
-
+    isDragging
   } = useSortable({
     id: column.id,
     data: {
@@ -45,11 +43,11 @@ export const ColumnContainer = ({ column, component, className }: Props) => {
         className="
       bg-columnBackgroundColor
       opacity-40
-      border-2
-      border-pink-500
+      z-50
+      border
       w-[350px]
-      h-[500px]
-      max-h-[500px]
+      h-[80vh]
+      max-h-[80vh]
       rounded-md
       flex
       flex-col
@@ -111,10 +109,9 @@ export const ColumnContainer = ({ column, component, className }: Props) => {
       </div>
 
       {/* Column task container */}
-      <div className="flex flex-grow flex-col gap-4  overflow-x-hidden overflow-y-auto">
+      <div className="flex flex-grow  flex-col gap-4  overflow-x-hidden overflow-y-auto">
         {component}
       </div>
-      
     </div>
   )
 }

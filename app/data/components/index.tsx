@@ -31,13 +31,8 @@ function DocComponent() {
 
 function DocComponent2() {
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Noteworthy technology acquisitions 2021
-        </h5>
-      </a>
-     
+    <div >
+
     </div>
   )
 }
@@ -47,13 +42,14 @@ const defaultCols: Column[] = [
     id: 'todo',
     title: 'Todo',
     component: <DocComponent2 />,
-    className: 'rounded-lg border  bg-background  w-[700px]'
+    className: ' w-[700px]'
+    // className: 'rounded-lg border  bg-background  w-[700px]'
   },
   {
     id: 'doing',
     title: 'Work in progress',
     component: <Chat id={id} />,
-    className: ' w-[350px]'
+    className: ' w-[500px]'
   }
 ]
 
@@ -78,12 +74,12 @@ function MultipleContainers() {
       className="
         m-auto
         flex
-        min-h-screen
+
         w-full
         items-center
         overflow-x-auto
         overflow-y-hidden
-        px-[40px]
+
     "
     >
       <DndContext
