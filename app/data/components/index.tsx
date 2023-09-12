@@ -17,6 +17,7 @@ import { createPortal } from 'react-dom'
 
 import { nanoid } from '@/lib/utils'
 import { Chat } from '@/components/chat'
+import TextEditor from '@/components/editor/text-editor'
 
 const id = nanoid()
 function DocComponent() {
@@ -29,20 +30,13 @@ function DocComponent() {
   )
 }
 
-function DocComponent2() {
-  return (
-    <div >
-
-    </div>
-  )
-}
 
 const defaultCols: Column[] = [
   {
     id: 'todo',
     title: 'Todo',
-    component: <DocComponent2 />,
-    className: ' w-[700px]'
+    component: <TextEditor />,
+    className: ' w-[900px] '
     // className: 'rounded-lg border  bg-background  w-[700px]'
   },
   {
